@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Merriweather:ital,wght@1,300&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@300;400;500;700&display=swap');
+:root {
+  --primary-color:#FF4A1C;
+  --secondary-color:#092327;
+  --tertiary-color:#B2FFA9;
+  --accent-color:#f0f8ff;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+}
+body{
+  max-height: 100vh;
+  max-width: 100vw;
+  font-family: 'Alice', serif;
+  font-family: 'Merriweather', serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'PT Serif', serif;
+  background-color: transparent;
+}
+.brand{
+    font-weight: bold;
+}
+.nav-link,.nav-link:hover{
+  width: 100px;
+  padding: 10px 0px 0px 0px;
+  text-align: center;
+  border-radius: 5px;
+  color: var(--accent-color);
+  background-color: var(--primary-color);
+  margin-left: 20px; 
+}
+li{
+  list-style-type: none;
+}
+.form-component{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;  
+  background-color: var(--secondary-color);
+  padding:50px;
+  border-radius: 5px;
+  color: var(--tertiary-color);
+}
+.form-control,.form-control:is(:hover, :focus, :active,){
+  background-color: transparent;
+  border: 1px solid var(--accent-color);
+}
+.form-control::placeholder,.form-select {
+  color: var(--accent-color);
+  background-color: transparent;
+}
+option{
+  background-color: #092327;
+}
+select, option{
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+}
+
+input {
+  -webkit-text-fill-color: var(--accent-color);
+  caret-color:var(--accent-color);
+  height: 50px;
+}
+
+.submit-btn{
+  height: 50px;
+  background-color: var(--tertiary-color);
+  border-radius: 20px;
+}
+.submit-btn:hover{
+  height: 50px;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--tertiary-color);
+  color: var(--tertiary-color);
+}
+.content{
+  overflow: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.emp{
+  border: 2px solid var(--secondary-color);
+  margin:20px;
+}
+.card-header{
+  background-color: var(--primary-color);
+}
+.view-component{
+  background-color: var(--secondary-color);
+  padding:20px;
+  border-radius: 5px;
+  color: var(--tertiary-color);
+display: grid;
+grid-template-columns: auto auto;
+}
+.emp-img{
+  border-radius: 5px;
+}
+.loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ ::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
