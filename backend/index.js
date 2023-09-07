@@ -2,6 +2,9 @@ import express from "express"
 import mongoose from "mongoose"
 import dotenv from "dotenv"
 import router from "./Routes/Routes.js"
+import cors from "cors"
+        import session from "express-session"
+
 dotenv.config()
 
 const DB_URL = process.env.DB_URL
@@ -9,9 +12,13 @@ const PORT = process.env.PORT
 
 const app = express()
 app.use(express.json())
-app.use("/api",router)
+app.use(express.urlencoded({ extended: true }));
+app.use(cors())
 
-mongoose.connect(DB_URL)
+app.use("/api",router)
+app.use(session({  secret: 'my-secret-key',  resave: false,  saveUninitialized: true,}));
+
+mongoose.connect(DB_URL,{useNewUrlParser: true, useUnifiedTopology: true})
 .then(app.listen(PORT,() => console.log(`Server is running on PORT: ${PORT}`)))
 .then(() => console.log("DB connected"))
 .catch((error) => console.log("Error occured",error))
