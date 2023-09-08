@@ -43,27 +43,16 @@ li{
   background-color: var(--secondary-color);
   padding:50px;
   border-radius: 5px;
-  color: var(--tertiary-color);
+  color: var(--accent-color);
 }
 .form-control,.form-control:is(:hover, :focus, :active,){
-  background-color: transparent;
   border: 1px solid var(--accent-color);
 }
 .form-control::placeholder,.form-select {
-  color: var(--accent-color);
-  background-color: transparent;
+  color: var(--secondary-color);
 }
-option{
-  background-color: #092327;
-}
-select, option{
-    background-color: var(--secondary-color);
-    color: var(--tertiary-color);
-}
-
 input {
-  -webkit-text-fill-color: var(--accent-color);
-  caret-color:var(--accent-color);
+  -webkit-text-fill-color: var(--secondary-color);
   height: 50px;
 }
 
@@ -80,24 +69,10 @@ input {
 }
 .content{
   overflow: auto;
-  display: grid;
-  grid-template-columns: auto auto;
+  margin: 20px 0px;
+  padding: 20px;
 }
-.emp{
-  border: 2px solid var(--secondary-color);
-  margin:20px;
-}
-.card-header{
-  background-color: var(--primary-color);
-}
-.view-component{
-  background-color: var(--secondary-color);
-  padding:20px;
-  border-radius: 5px;
-  color: var(--tertiary-color);
-display: grid;
-grid-template-columns: auto auto;
-}
+
 .emp-img{
   border-radius: 5px;
 }

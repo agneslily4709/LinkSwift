@@ -4,7 +4,11 @@ import { Routes,Route } from 'react-router-dom';
 import RegisterUser from './Pages/RegisterUser';
 import LoginUser from './Pages/LoginUser';
 import Activation from './Pages/Activation';
-import Dashboard from './Pages/Dashboard';
+import Dashboard from './Components/Dashboard';
+import Logout from './Pages/Logout';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+
 
 function App() {
   return (
@@ -14,9 +18,10 @@ function App() {
                     <Route path='/registerUser' element={<RegisterUser/>}/>
                     <Route path='/loginUser' element={<LoginUser/>}/>
                     <Route path='/activate' element={<Activation/>}/>
-                    <Route path='/' element={<Dashboard/>}/>
-
+                    <Route path='/:id' element={<Dashboard/>}/>
+                    <Route path='/logout' element={<Logout/>}/>
               </Routes>
+              <ToastContainer/>
     </div>
   );
 }
